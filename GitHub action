@@ -1,0 +1,20 @@
+# .github/workflows/deploy-rhel.yml
+name: Deploy to RHEL
+on: [push]
+jobs:
+  deploy-rpm:
+    runs-on: self-hosted  # Your RHEL server
+    steps:
+    - uses: actions/checkout@v4
+    
+    # Install RPM directly
+    - name: Install RPM dependencies
+      run: |
+        sudo yum install -y rpm-build rpmdevtools gcc-c++ nodejs npm postgresql-server
+    
+    # Build & install CloudDrive RPM
+    - name: Build RPM
+      run: rpmbuild -ba clouddrive.spec
+      
+    - name: Install RPM
+      run: sudo rpm -i ~/rpmbuild/RPMS/x86_64/clouddrive-1.0-1.el8.x86_64.rpm
