@@ -1,0 +1,60 @@
+clouddrive/
+├── 📄 README.md                    [Provided]
+├── 📄 LICENSE                     
+├── 📄 package.json                 [Provided] 
+├── 📄 turbo.json                   [Provided]
+├── 📄 .gitignore                   [Provided]
+├── 📄 .env.example                 [Provided]
+├── 📄 tsconfig.json
+│
+├── 📁 apps/
+│   ├── 📁 web/                     ⭐ Next.js 15 Frontend
+│   │   ├── 📄 package.json         [Provided]
+│   │   ├── 📄 next.config.js       [Provided]
+│   │   ├── 📄 tailwind.config.js   [Provided]
+│   │   ├── 📄 tsconfig.json
+│   │   ├── 📄 app/
+│   │   │   ├── 📄 globals.css      [Provided]
+│   │   │   ├── 📄 layout.tsx       [Provided]
+│   │   │   ├── 📄 page.tsx         ← NEW
+│   │   │   ├── 📁 login/
+│   │   │   │   └── 📄 page.tsx     [Provided]
+│   │   │   └── 📁 drive/
+│   │   │       ├── 📄 page.tsx     [Provided]
+│   │   │       └── 📁 [folderId]/
+│   │   │           └── 📄 page.tsx [Provided]
+│   │   ├── 📁 components/
+│   │   │   ├── 📁 ui/
+│   │   │   │   ├── 📄 button.tsx   ← NEW
+│   │   │   │   └── 📄 input.tsx    ← NEW
+│   │   │   ├── 📄 Nav.tsx          [Provided]
+│   │   │   ├── 📄 FileGrid.tsx     [Provided]
+│   │   │   ├── 📄 FolderTree.tsx   [Provided]
+│   │   │   ├── 📄 UploadDropzone.tsx [Provided]
+│   │   │   └── 📄 Breadcrumbs.tsx  [Provided]
+│   │   ├── 📁 lib/
+│   │   │   ├── 📁 supabase/        [Provided]
+│   │   │   ├── 📄 queries.ts       ← NEW
+│   │   │   └── 📄 types.ts         [Provided]
+│   │   └── 📄 .env.local.example   [Provided]
+│   │
+│   └── 📁 api/                     Backend API
+│       ├── 📄 package.json         [Provided]
+│       ├── 📄 server.js            [Provided]
+│       ├── 📁 middleware/
+│       │   └── 📄 auth.js          [Provided]
+│       └── 📁 routes/
+│           ├── 📄 auth.js          ← NEW
+│           ├── 📄 folders.js       [Provided]
+│           ├── 📄 files.js         ← NEW
+│           └── 📄 shares.js        ← NEW
+│
+├── 📁 supabase/
+│   ├── 📁 migrations/
+│   │   └── 📄 001_create_schema.sql [Provided]
+│   └── 📄 config.toml              ← NEW
+│
+└── 📁 .github/
+    └── 📁 workflows/
+        ├── 📄 ci.yml               ← NEW
+        └── 📄 deploy.yml           ← NEW
